@@ -20,4 +20,13 @@ public interface IDailyDilbertService
 ```
 There is a test project with a couple of tests, but a simple example of how to use this is shown below:
 
+```C#
+public async void Dilbert()
+{
+    var service = new DailyDilbertService();
 
+    var filePath = await service.DailyAsFileAsync();   
+
+    // Load the image as required....
+}
+```
