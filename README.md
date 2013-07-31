@@ -18,7 +18,6 @@ public interface IDailyDilbertService
     Task<Stream> DailyAsStreamAsync();
 }
 ```
-
 There is a test project with a couple of tests, but a simple example of how to use this is shown below:
 
 
