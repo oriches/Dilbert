@@ -1,4 +1,4 @@
-﻿namespace Dilbert.Services
+﻿namespace Dilbert
 {
     using System;
     using System.IO;

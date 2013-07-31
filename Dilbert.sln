@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dilbert.Service.Tests", "Dilbert.Tests\Dilbert.Service.Tests.csproj", "{960AEF7F-5BD9-414A-A9EA-51F18F895017}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dilbert.Tests", "Dilbert.Tests\Dilbert.Tests.csproj", "{960AEF7F-5BD9-414A-A9EA-51F18F895017}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{6D54F1F9-BF15-4581-90F5-5E12359E2F28}"
 	ProjectSection(SolutionItems) = preProject
@@ -10,7 +10,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{6D54F1
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dilbert.Services", "Dilbert.Services\Dilbert.Services.csproj", "{43E18FF5-F8CF-4C80-86EE-E7425A2A0110}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dilbert", "Dilbert\Dilbert.csproj", "{43E18FF5-F8CF-4C80-86EE-E7425A2A0110}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

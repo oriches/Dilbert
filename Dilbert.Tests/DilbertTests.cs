@@ -1,8 +1,7 @@
-﻿namespace Dilbert.Service.Tests
+﻿namespace Dilbert.Tests
 {
     using System.IO;
     using NUnit.Framework;
-    using Services;
 
     [TestFixture]
     public class DilbertTests

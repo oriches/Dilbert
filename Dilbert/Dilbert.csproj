@@ -7,8 +7,8 @@
     <ProjectGuid>{43E18FF5-F8CF-4C80-86EE-E7425A2A0110}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Dilbert.Services</RootNamespace>
-    <AssemblyName>Dilbert.Services</AssemblyName>
+    <RootNamespace>Dilbert</RootNamespace>
+    <AssemblyName>Dilbert</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
