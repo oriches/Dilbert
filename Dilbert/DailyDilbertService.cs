@@ -69,9 +69,7 @@
 
         private static async Task<Uri> GetImageUriFromRssFeedAsync()
         {
-            var handler = new WebRequestHandler();
-            var client = new HttpClient(handler, true);
-
+            using(var client = GetClient())
             using(var response = await client.GetAsync(RssFeedUri))
             using(var stream = await response.Content.ReadAsStreamAsync())
             using(var reader = new XmlTextReader(stream))
@@ -97,15 +95,21 @@
 
         private static async Task GetImageAndWriteToFileAsync(Uri imageUri, string filePath)
         {
-            var handler = new WebRequestHandler();
-
-            using(var client = new HttpClient(handler, true))
+            using(var client = GetClient())
             using(var response = await client.GetAsync(imageUri))
             using(var imageStream = await response.Content.ReadAsStreamAsync())
             using(var fileStream = File.Create(filePath))
             {
                 imageStream.CopyTo(fileStream);
             }
+        }
+
+        private static HttpClient GetClient()
+        {
+            var handler = new HttpClientHandler {UseDefaultCredentials = true, UseProxy = true};
+            var client = new HttpClient(handler, true);
+
+            return client;
         }
     }
 }
