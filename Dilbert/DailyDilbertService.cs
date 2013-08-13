@@ -3,6 +3,7 @@
     using System;
     using System.IO;
     using System.Linq;
+    using System.Net;
     using System.Net.Http;
     using System.ServiceModel.Syndication;
     using System.Threading.Tasks;
@@ -107,6 +108,11 @@
         private static HttpClient GetClient()
         {
             var handler = new HttpClientHandler {UseDefaultCredentials = true, UseProxy = true};
+            if (handler.Proxy != null)
+            {
+                handler.Proxy.Credentials = CredentialCache.DefaultCredentials;
+            }
+
             var client = new HttpClient(handler, true);
 
             return client;
