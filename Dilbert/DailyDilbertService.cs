@@ -107,7 +107,12 @@
 
         private static HttpClient GetClient()
         {
-            var handler = new HttpClientHandler {UseDefaultCredentials = true, UseProxy = true};
+            var handler = new HttpClientHandler
+                          {
+                              Proxy = WebRequest.DefaultWebProxy,
+                              Credentials = CredentialCache.DefaultCredentials
+                          };
+
             if (handler.Proxy != null)
             {
                 handler.Proxy.Credentials = CredentialCache.DefaultCredentials;
