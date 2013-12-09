@@ -14,7 +14,6 @@
     public sealed class DailyDilbertService : IDailyDilbertService
     {
         private static readonly Uri OutToLunchUri = new Uri("http://www.greatamericanthings.net/wp-content/uploads/2012/02/Dilbert-by-stripturnhoutdotbe-300x225.jpg");
-
         private static readonly Uri RssFeed1Uri = new Uri("http://pipes.yahoo.com/pipes/pipe.run?_id=1fdc1d7a66bb004a2d9ebfedfb3808e2&_render=rss");
         private static readonly Uri RssFeed2Uri = new Uri("http://pipes.yahoo.com/pipes/pipe.run?_id=1627e842cee45e7358ef6b2a8530263a&_render=rss");
 
