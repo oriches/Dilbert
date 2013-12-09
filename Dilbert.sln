@@ -16,7 +16,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dilbert.Tests", "Dilbert.Te
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget spec", ".nuget spec", "{2326A0AE-4E8D-44C0-B6E7-8CEA468DE23F}"
 	ProjectSection(SolutionItems) = preProject
-		Daily.Dilbert.Service.1.6.nupkg = Daily.Dilbert.Service.1.6.nupkg
+		Daily.Dilbert.Service.1.7.nupkg = Daily.Dilbert.Service.1.7.nupkg
 	EndProjectSection
 EndProject
 Global
