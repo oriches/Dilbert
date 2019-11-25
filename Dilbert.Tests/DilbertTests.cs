@@ -1,18 +1,18 @@
-﻿namespace Dilbert.Tests
-{
-    using System.IO;
-    using NUnit.Framework;
+﻿using System.IO;
+using NUnit.Framework;
 
+namespace Dilbert.Tests
+{
     [TestFixture]
     public class DilbertTests
     {
-        private IDailyDilbertService _service;
-
         [SetUp]
         public void SetUp()
         {
             _service = new DailyDilbertService();
         }
+
+        private IDailyDilbertService _service;
 
         [Test]
         public void given_an_instance_when_request_daily_as_file_then_file_path_is_returned()

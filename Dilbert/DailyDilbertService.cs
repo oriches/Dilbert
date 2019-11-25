@@ -1,28 +1,23 @@
-﻿namespace Dilbert
-{
-    using System;
-    using System.Diagnostics.Contracts;
-    using System.IO;
-    using System.Linq;
-    using System.Net;
-    using System.Net.Http;
-    using System.ServiceModel.Syndication;
-    using System.Threading.Tasks;
-    using System.Xml;
+﻿using System;
+using System.IO;
+using System.Linq;
+using System.Net;
+using System.Net.Http;
+using System.ServiceModel.Syndication;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
+using System.Xml;
 
-    [Pure]
+namespace Dilbert
+{
     public sealed class DailyDilbertService : IDailyDilbertService
     {
-        private static readonly Uri OutToLunchUri = new Uri("http://www.greatamericanthings.net/wp-content/uploads/2012/02/Dilbert-by-stripturnhoutdotbe-300x225.jpg");
-        private static readonly Uri RssFeed1Uri = new Uri("http://pipes.yahoo.com/pipes/pipe.run?_id=1fdc1d7a66bb004a2d9ebfedfb3808e2&_render=rss");
-        private static readonly Uri RssFeed2Uri = new Uri("http://pipes.yahoo.com/pipes/pipe.run?_id=1627e842cee45e7358ef6b2a8530263a&_render=rss");
-
-        private const string StripStartSegment1 = "http://www.dilbert.com/dyn/str_strip/";
-        private const string StripStartSegment2 = "http://dilbert.com/dyn/str_strip/";
-        private const string StripEndSegment = "strip.zoom.gif";
+        private const string ImgHtmlRegex = @"<img[^>]*?src\s*=\s*[""']?([^'"" >]+?)[ '""][^>]*?>";
         private const string DilbertFilename = "dilbert.jpg";
 
-        [Pure]
+        private static readonly Uri RssFeedUri =
+            new Uri("http://comicfeeds.chrisbenard.net/view/dilbert/default");
+
         public async Task<Stream> DailyAsStreamAsync()
         {
             try
@@ -37,7 +32,6 @@
             }
         }
 
-        [Pure]
         public async Task<string> DailyAsFileAsync()
         {
             try
@@ -62,15 +56,10 @@
                 var date = DateTimeOffset.UtcNow.Date;
                 var fileDate = fileInfo.LastWriteTimeUtc.Date;
 
-                if (date == fileDate)
-                {
-                    return filePath;
-                }
+                if (date == fileDate) return filePath;
             }
 
-            var imageUri = (await GetImageUriFromRssFeedAsync(RssFeed1Uri)
-                ?? await GetImageUriFromRssFeedAsync(RssFeed2Uri))
-                ?? OutToLunchUri;
+            var imageUri = await GetImageUriFromRssFeedAsync(RssFeedUri);
 
             await GetImageAndWriteToFileAsync(imageUri, filePath);
 
@@ -86,35 +75,18 @@
             {
                 var feed = SyndicationFeed.Load(reader);
 
-                if (feed == null)
-                {
-                    return null;
-                }
-
                 // The items are in reverse date order - so the latest is first
                 var latestItem = feed.Items.First();
 
-                // The image url is buried in the Summary text - which is html of the form:
-                // <a ref=".."><img src=".."></a>
-                var summary = latestItem.Summary;
-                var text = summary.Text;
-
-                var startIndex = text.IndexOf(StripStartSegment1, StringComparison.Ordinal);
-                if (startIndex == -1)
+                var content = (TextSyndicationContent) latestItem.Content;
+                var match = Regex.Match(content.Text, ImgHtmlRegex, RegexOptions.IgnoreCase | RegexOptions.Singleline);
+                if (match.Success)
                 {
-                    startIndex = text.IndexOf(StripStartSegment2, StringComparison.Ordinal);
+                    var href = match.Groups[1].Value;
+                    return new Uri("http:" + href);
                 }
 
-                if (startIndex == -1)
-                {
-                    return null;
-                }
-
-                var endIndex = text.IndexOf(StripEndSegment, StringComparison.Ordinal) + StripEndSegment.Length;
-
-                var length = endIndex - startIndex;
-                var imageUrl = text.Substring(startIndex, length);
-                return new Uri(imageUrl);
+                return null;
             }
         }
 
@@ -137,10 +109,7 @@
                 Credentials = CredentialCache.DefaultCredentials
             };
 
-            if (handler.Proxy != null)
-            {
-                handler.Proxy.Credentials = CredentialCache.DefaultCredentials;
-            }
+            if (handler.Proxy != null) handler.Proxy.Credentials = CredentialCache.DefaultCredentials;
 
             var client = new HttpClient(handler, true);
 
