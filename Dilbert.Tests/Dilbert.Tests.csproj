@@ -61,9 +61,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Dilbert\Dilbert.csproj">
       <Project>{43E18FF5-F8CF-4C80-86EE-E7425A2A0110}</Project>
       <Name>Dilbert</Name>
