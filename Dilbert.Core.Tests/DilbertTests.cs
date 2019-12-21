@@ -3,7 +3,7 @@ using System.IO;
 using System.Threading.Tasks;
 using NUnit.Framework;
 
-namespace Dilbert.Tests
+namespace Dilbert.Core.Tests
 {
     [TestFixture]
     public class DilbertTests

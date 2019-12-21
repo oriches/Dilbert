@@ -12,6 +12,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget spec", ".nuget spec"
 		Daily.Dilbert.Service.nupkg = Daily.Dilbert.Service.nupkg
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dilbert.Core", "Dilbert.Core\Dilbert.Core.csproj", "{1D5CE897-167D-4EEB-82EF-A3DC364C35A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dilbert.Core.Tests", "Dilbert.Core.Tests\Dilbert.Core.Tests.csproj", "{69470EAA-13CD-43FF-A32F-8748DCA35C32}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,6 +30,14 @@ Global
 		{960AEF7F-5BD9-414A-A9EA-51F18F895017}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{960AEF7F-5BD9-414A-A9EA-51F18F895017}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{960AEF7F-5BD9-414A-A9EA-51F18F895017}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D5CE897-167D-4EEB-82EF-A3DC364C35A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D5CE897-167D-4EEB-82EF-A3DC364C35A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D5CE897-167D-4EEB-82EF-A3DC364C35A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D5CE897-167D-4EEB-82EF-A3DC364C35A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69470EAA-13CD-43FF-A32F-8748DCA35C32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69470EAA-13CD-43FF-A32F-8748DCA35C32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69470EAA-13CD-43FF-A32F-8748DCA35C32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69470EAA-13CD-43FF-A32F-8748DCA35C32}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
