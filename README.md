@@ -1,5 +1,8 @@
 Dilbert
 =======
+
+[![Build status](https://ci.appveyor.com/api/projects/status/3v66mx6u9v4dp8dk/branch/master?svg=true)](https://ci.appveyor.com/project/oriches/dilbert/branch/master)
+
 A .Net class library to access the Daily Dilbert cartoon.
 
 Supported versions:
