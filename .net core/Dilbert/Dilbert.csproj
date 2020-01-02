@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\.net standard\ClassLibrary1\Dilbert.Common.csproj" />
+    <ProjectReference Include="..\..\.net standard\Dilbert.Common\Dilbert.Common.csproj" />
   </ItemGroup>
 
 </Project>
