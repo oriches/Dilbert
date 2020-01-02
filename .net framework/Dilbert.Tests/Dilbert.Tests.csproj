@@ -54,10 +54,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\.net standard\ClassLibrary1\Dilbert.Common.csproj">
-      <Project>{DB1B3690-8E59-4D0A-972E-A137A00C963E}</Project>
-      <Name>Dilbert.Common</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Dilbert\Dilbert.csproj">
       <Project>{43e18ff5-f8cf-4c80-86ee-e7425a2a0110}</Project>
       <Name>Dilbert</Name>
