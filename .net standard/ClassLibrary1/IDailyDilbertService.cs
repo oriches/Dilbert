@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using System.Threading.Tasks;
 
-namespace Dilbert.Core
+namespace Dilbert.Common
 {
     public interface IDailyDilbertService
     {

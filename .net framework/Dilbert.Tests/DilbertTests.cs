@@ -28,7 +28,7 @@ namespace Dilbert.Tests
             }
         }
 
-        private IDailyDilbertService _service;
+        private DailyDilbertService _service;
 
         [Test]
         public void given_an_instance_when_request_daily_as_file_then_file_path_is_returned()

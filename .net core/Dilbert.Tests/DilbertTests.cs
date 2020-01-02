@@ -1,12 +1,13 @@
 ﻿using System;
 using System.IO;
 using System.Threading.Tasks;
+using Dilbert.Common;
 using NUnit.Framework;
 
-namespace Dilbert.Core.Tests
+namespace Dilbert.Tests
 {
     [TestFixture]
-    public class DilbertTests
+    public sealed class DilbertTests
     {
         [SetUp]
         public void SetUp()
