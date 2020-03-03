@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29519.87
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget spec", ".nuget spec", "{E7FC7235-A6F3-4289-8AFA-34340B88F071}"
 	ProjectSection(SolutionItems) = preProject
-		Daily.Dilbert.Service.nupkg = Daily.Dilbert.Service.nupkg
+		Daily.Dilbert.Service.nuspec = Daily.Dilbert.Service.nuspec
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".net framework", ".net framework", "{C0191BB9-7BBB-463E-B43C-EFD9B348A6FA}"
