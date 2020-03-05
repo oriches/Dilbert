@@ -1,6 +1,6 @@
-Dilbert
-=======
+# Dilbert
 
+[![NuGet](https://img.shields.io/nuget/v/daily.dilbert.service.svg)](https://github.com/oriches/daily.dilbert.service)
 [![Build status](https://ci.appveyor.com/api/projects/status/3v66mx6u9v4dp8dk/branch/master?svg=true)](https://ci.appveyor.com/project/oriches/dilbert/branch/master)
 
 A .Net class library to access the Daily Dilbert cartoon.
