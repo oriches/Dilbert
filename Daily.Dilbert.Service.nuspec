@@ -11,13 +11,13 @@
     <description>Provides a .Net assembly for getting the Daily Dilbert cartoon.
 
 .Net Framework 4.8,
-.Net Core 3.1</description>
+.Net 5.0</description>
     <summary>Provides a .Net assembly for getting the Daily Dilbert cartoon.
 
 .Net Framework 4.8,
-.Net Core 3.1</summary>
-    <releaseNotes>Added support for .Net Core 3.1, and refactored common code into .Net Standard 2.0 library</releaseNotes>
-    <copyright>Daily.Dilbert.Service 2020</copyright>
+.Net 5.0</summary>
+    <releaseNotes>Added support for .Net 5.0, and refactored common code into .Net Standard 2.0 library</releaseNotes>
+    <copyright>Daily.Dilbert.Service 2021</copyright>
     <dependencies>
       <group targetFramework=".NETFramework4.8">
         <dependency id="Microsoft.Bcl" version="1.1.10" />
@@ -25,17 +25,17 @@
         <dependency id="Microsoft.Bcl.Build" version="1.0.21" />
         <dependency id="Microsoft.Net.Http" version="2.2.29" />
       </group>
-      <group targetFramework=".NETCoreApp3.1">
+      <group targetFramework="net5.0">
         <dependency id="Microsoft.SyndicationFeed.ReaderWriter" version="1.0.2" />
       </group>
     </dependencies>
   </metadata>
   <files>
-    <file src=".net framework\Dilbert\bin\Release\Dilbert.Common.dll" target="lib\net48\Dilbert.Common.dll" />
-    <file src=".net framework\Dilbert\bin\Release\Dilbert.dll" target="lib\net48\Dilbert.dll" />
-    <file src=".net framework\Dilbert\bin\Release\Dilbert.dll.config" target="lib\net48\Dilbert.dll.config" />
-    <file src=".net core\Dilbert\bin\Release\netcoreapp3.1\Dilbert.Common.dll" target="lib\netcoreapp3.1\Dilbert.Common.dll" />
-    <file src=".net core\Dilbert\bin\Release\netcoreapp3.1\Dilbert.deps.json" target="lib\netcoreapp3.1\Dilbert.deps.json" />
-    <file src=".net core\Dilbert\bin\Release\netcoreapp3.1\Dilbert.dll" target="lib\netcoreapp3.1\Dilbert.dll" />
+    <file src="lib\net48\Dilbert.Common.dll" target="lib\net48\Dilbert.Common.dll" />
+    <file src="lib\net48\Dilbert.dll" target="lib\net48\Dilbert.dll" />
+    <file src="lib\net48\Dilbert.dll.config" target="lib\net48\Dilbert.dll.config" />
+    <file src="lib\net5.0\Dilbert.Common.dll" target="lib\net5.0\Dilbert.Common.dll" />
+    <file src="lib\net5.0\Dilbert.deps.json" target="lib\net5.0\Dilbert.deps.json" />
+    <file src="lib\net5.0\Dilbert.dll" target="lib\net5.0\Dilbert.dll" />
   </files>
 </package>
