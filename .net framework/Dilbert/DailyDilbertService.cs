@@ -28,7 +28,7 @@ namespace Dilbert
                 if (match.Success)
                 {
                     var href = match.Groups[1].Value;
-                    return new Uri("http:" + href);
+                    return new Uri(href);
                 }
 
                 return null;

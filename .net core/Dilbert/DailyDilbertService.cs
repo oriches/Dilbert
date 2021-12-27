@@ -31,7 +31,9 @@ namespace Dilbert
                         if (match.Success)
                         {
                             var href = match.Groups[1].Value;
-                            return new Uri("http:" + href);
+                            return href.StartsWith("http:") || href.StartsWith("https:")
+                                ? new Uri(href)
+                                : new Uri("http:" + href);
                         }
 
                     }

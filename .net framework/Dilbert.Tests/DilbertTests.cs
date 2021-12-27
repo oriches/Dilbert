@@ -31,29 +31,25 @@ namespace Dilbert.Tests
         private DailyDilbertService _service;
 
         [Test]
-        public void given_an_instance_when_request_daily_as_file_then_file_path_is_returned()
+        public async Task given_an_instance_when_request_daily_as_file_then_file_path_is_returned()
         {
             // ARRANGE
             // ACT
-            var task = _service.DailyAsFileAsync();
-            task.Wait();
-
-            var filePath = task.Result;
-
+            var filePath = await _service.DailyAsFileAsync();
+            
             // ASSERT
             Assert.That(filePath, Is.Not.Empty);
             Assert.That(new FileInfo(filePath).Exists, Is.True);
         }
 
         [Test]
-        public void given_an_instance_when_request_daily_as_stream_then_file_stream_is_returned()
+        public async Task given_an_instance_when_request_daily_as_stream_then_file_stream_is_returned()
         {
             // ARRANGE
             // ACT
-            var task = _service.DailyAsStreamAsync();
-            task.Wait();
+            var filePath = await _service.DailyAsFileAsync();
 
-            var length = task.Result.Length;
+            var length = filePath.Length;
 
             // ASSERT
             Assert.That(length, Is.Not.EqualTo(0));
