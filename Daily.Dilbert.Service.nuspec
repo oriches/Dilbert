@@ -31,11 +31,11 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="lib\net48\Dilbert.Common.dll" target="lib\net48\Dilbert.Common.dll" />
-    <file src="lib\net48\Dilbert.dll" target="lib\net48\Dilbert.dll" />
-    <file src="lib\net48\Dilbert.dll.config" target="lib\net48\Dilbert.dll.config" />
-    <file src="lib\net5.0\Dilbert.Common.dll" target="lib\net5.0\Dilbert.Common.dll" />
-    <file src="lib\net5.0\Dilbert.deps.json" target="lib\net5.0\Dilbert.deps.json" />
-    <file src="lib\net5.0\Dilbert.dll" target="lib\net5.0\Dilbert.dll" />
+    <file src=".net framework\Dilbert\bin\Release\Dilbert.Common.dll" target="lib\net48\Dilbert.Common.dll" />
+    <file src=".net framework\Dilbert\bin\Release\Dilbert.dll" target="lib\net48\Dilbert.dll" />
+    <file src=".net framework\Dilbert\bin\Release\Dilbert.dll.config" target="lib\net48\Dilbert.dll.config" />
+    <file src=".net core\Dilbert\bin\Release\net5.0\Dilbert.Common.dll" target="lib\net5.0\Dilbert.Common.dll" />
+    <file src=".net core\Dilbert\bin\Release\net5.0\Dilbert.deps.json" target="lib\net5.0\Dilbert.deps.json" />
+    <file src=".net core\Dilbert\bin\Release\net5.0\Dilbert.dll" target="lib\net5.0\Dilbert.dll" />
   </files>
 </package>
