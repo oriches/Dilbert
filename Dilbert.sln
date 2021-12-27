@@ -10,7 +10,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget spec", ".nuget spec"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".net framework", ".net framework", "{C0191BB9-7BBB-463E-B43C-EFD9B348A6FA}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".net core", ".net core", "{969B95C2-FD37-4B79-817B-91BB34858D88}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".net", ".net", "{969B95C2-FD37-4B79-817B-91BB34858D88}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dilbert", ".net framework\Dilbert\Dilbert.csproj", "{43E18FF5-F8CF-4C80-86EE-E7425A2A0110}"
 EndProject
